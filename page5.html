@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Welldone - Chat</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #38e07b;
+        --secondary-bg: #264532;
+        --text-primary: #ffffff;
+        --text-secondary: #96c5a9;
+        --background: #122118;
+      }
+      .chat-message {
+        @apply rounded-2xl px-4 py-3;
+      }
+      .sent-message {
+        @apply bg-[var(--primary-color)] text-[var(--background)] chat-message;
+      }
+      .received-message {
+        @apply bg-[var(--secondary-bg)] text-[var(--text-primary)] chat-message;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background)] font-['Spline_Sans',_sans-serif] text-[var(--text-primary)]">
+<div class="flex h-screen flex-col">
+<header class="flex shrink-0 items-center justify-between border-b border-[var(--secondary-bg)] px-6 py-3">
+<div class="flex items-center gap-3">
+<svg class="h-6 w-6 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+<h1 class="text-xl font-bold">Welldone</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary-bg)] text-[var(--text-secondary)] transition-colors hover:bg-opacity-80">
+<span class="material-symbols-outlined"> settings </span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCZYleNCvHG2rmWJWhzihrFu91mR8WHcXC74DHM5FWsJmXzrZsw18UxZg2Tpi9QfPIHpOyMC9UAw34TYeFrcpfTTK9qeGaGAS6kSmXJHjrcu2V52Jt37BYKdyuDRnd137ZrxF47IhHfpvmpgDFSmTUVBiwbAc-sxVvXjv_s1GqJxaQWFN83gGbgdedSpi4UqUl3dBOO_S4Vn6dyLjNueMl4243j_jswaqdPrSBhXX_21mMa3_5fhA9GhyxMzH4lAs2YZP6RUoO64Q");'></div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<div class="flex flex-1 flex-col">
+<div class="border-b border-[var(--secondary-bg)] p-4 text-center">
+<h2 class="text-2xl font-bold">Sophia</h2>
+<p class="text-sm text-[var(--text-secondary)]">You matched on Monday. Say hello!</p>
+</div>
+<div class="flex-1 overflow-y-auto p-6">
+<div class="flex flex-col gap-6">
+<div class="flex items-end gap-3">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrp0VEf5H7Hr2mMd18-9nlYQNYAgrXZPSwIJnQqF3hsCV03vurNRztR27mOUatcQ3pxTne5kKTzAXfEAJYRznp6ZDWKFf3U-2HB9kz8p7RKFNjcNhKnodhJc9tW6xEDuyZv0VmeZyV_h8OFfAemR1qXE9voItEtBh7YMv2VLoZpwGGUlRfi-eQ2wYmaMxU7q-poSIY2y7qETprSLkTHNJdo3yA75Ce4xW_3VGzko44PaoZ408l1O6nX8KX4RRfBD15TD6CxMBAw4M");'></div>
+<div>
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1">Sophia</p>
+<p class="received-message max-w-md">Hi there! I'm excited to connect with someone who's also passionate about mindfulness and yoga. How's your day going?</p>
+</div>
+</div>
+<div class="flex items-end justify-end gap-3">
+<div>
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1 text-right">You</p>
+<p class="sent-message max-w-md">Hey Sophia! My day's been pretty good, just finished a meditation session. How about you?</p>
+</div>
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB43Yf3m2NdtxX6sfhw6VNmsz9I-IxcR9TMZXdkJLMEL1tWP-BhVGv_wTDxZDm6pol9xdI3_mg3B4u8R-NTBZYEkacWfuzYj_POPsYn45T2Wr_sYLUzcU_F2XKee2tyH9CbEXY-NPinyZZ6hlUBCB28ayZKY7GztUBklcq781-VsfXDG9ruiLfQnWzkXQqJkx1ZlpVM3FmFzS7Nl4YL_Ms-W-xIMmJg79cavCGuBy0PISrM9JD8quEtQEDVkMsvQAb3qM_gt3n8LAg");'></div>
+</div>
+<div class="flex items-end gap-3">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnSPanQCfr0tKjfbCgwSeheGbF0X8X9QI6c0l5cLH174_uv4cgIqwiWXLOHqeze1izIdY2O2hebPYgqaIfjO2RRU9UT0mWcPcJafj2WPxmkd1YgneMpyAbngOTRkcBhqRQ6gqUErjp0bBcdiRggO1wEqS8mIvqLDNd_tZrX59lwcj-OPOBPWRGOsSrPRAvZ5VNNhHLko3B8y31YuWt7kcPSXkDY_eeZv3WH2ks0VRbte-Crsi6B5j7oObUTi3d7w10NYbJu1lkli8");'></div>
+<div>
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1">Sophia</p>
+<p class="received-message max-w-md">That sounds lovely! I had a great yoga class this morning, feeling centered and energized. What kind of meditation do you practice?</p>
+</div>
+</div>
+<div class="flex items-end justify-end gap-3">
+<div>
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1 text-right">You</p>
+<p class="sent-message max-w-md">I usually do guided meditations, focusing on breath and body awareness. It helps me stay present. Do you have any favorite yoga styles?</p>
+</div>
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo2FS2E2IyIviL884R_ucUdWifLprHMcUxc1xroBRMZsUitscPkUc-TlCnMPxxY5x3qbDgKFMYejAphiL402Q5Q3nh4GmLNU6JCioZUSkN8yHAyFVAu7cR7B2WEjfNxxcbqFdC7gr7ok3DTrtLiD3F0kDvdpfFXkfEq3ghJY3vhAfS_R6E3qHBu5TERzkstQ9nqNfeECK2jW-rK2wbqbDRsGkluWDrLPeJh34USfzTf76HhRNTKl4OY1dB_56wL9r5eCTG6Mkzv8Q");'></div>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-[var(--secondary-bg)] shrink-0">
+<div class="flex items-center gap-2 p-2 rounded-full bg-[var(--secondary-bg)]">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-xl"> add_reaction </span>
+</button>
+<input class="flex-1 bg-transparent border-none text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-0" placeholder="Send a message..." type="text"/>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-xl"> photo_camera </span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary-color)] text-[var(--background)] transition-colors hover:bg-opacity-90">
+<span class="material-symbols-outlined text-xl"> send </span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

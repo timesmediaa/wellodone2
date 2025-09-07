@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Welldone - Chat</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #38e07b;
+            --secondary-bg: #264532;
+            --text-primary: #ffffff;
+            --text-secondary: #96c5a9;
+            --background: #122118;
+        }
+        .chat-message {
+            @apply rounded-2xl px-4 py-3 relative;
+        }
+        .sent-message {
+            @apply bg-[var(--primary-color)] text-[var(--background)] chat-message;
+            border-bottom-right-radius: 4px;
+        }
+        .received-message {
+            @apply bg-[var(--secondary-bg)] text-[var(--text-primary)] chat-message;
+            border-bottom-left-radius: 4px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .message-animate {
+            animation: fadeIn 0.3s ease-out;
+        }
+        .reaction-button {
+            @apply absolute -bottom-4 right-2 bg-gray-700 p-1 rounded-full text-xs transition-transform transform hover:scale-110;
+        }
+    </style>
+</head>
+<body class="bg-[var(--background)] font-['Spline_Sans',_sans-serif] text-[var(--text-primary)]">
+<div class="flex h-screen flex-col" x-data="{ showPrompts: false }">
+<header class="flex shrink-0 items-center justify-between border-b border-[var(--secondary-bg)] px-6 py-3">
+<div class="flex items-center gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary-bg)] text-[var(--text-secondary)] transition-colors hover:bg-opacity-80" href="#">
+<span class="material-symbols-outlined"> arrow_back </span>
+</a>
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnSPanQCfr0tKjfbCgwSeheGbF0X8X9QI6c0l5cLH174_uv4cgIqwiWXLOHqeze1izIdY2O2hebPYgqaIfjO2RRU9UT0mWcPcJafj2WPxmkd1YgneMpyAbngOTRkcBhqRQ6gqUErjp0bBcdiRggO1wEqS8mIvqLDNd_tZrX59lwcj-OPOBPWRGOsSrPRAvZ5VNNhHLko3B8y31YuWt7kcPSXkDY_eeZv3WH2ks0VRbte-Crsi6B5j7oObUTi3d7w10NYbJu1lkli8");'></div>
+<div>
+<h2 class="font-bold">Sophia</h2>
+<p class="text-xs text-[var(--text-secondary)]">Online</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary-bg)] text-[var(--text-secondary)] transition-colors hover:bg-opacity-80">
+<span class="material-symbols-outlined"> videocam </span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary-bg)] text-[var(--text-secondary)] transition-colors hover:bg-opacity-80">
+<span class="material-symbols-outlined"> call </span>
+</button>
+<div class="relative" x-data="{ open: false }">
+<button @click="open = !open" class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary-bg)] text-[var(--text-secondary)] transition-colors hover:bg-opacity-80">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+<div @click.away="open = false" class="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-[var(--secondary-bg)] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10" style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-end="transform opacity-100 scale-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:leave="transition ease-in duration-75" x-transition:leave-end="transform opacity-0 scale-95" x-transition:leave-start="transform opacity-100 scale-100">
+<div class="py-1">
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-[var(--text-primary)] hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined text-base"> person_search </span> View Profile
+                            </a>
+<a @click.prevent="reportModal = true; open = false" class="flex items-center gap-3 px-4 py-2 text-sm text-[var(--text-primary)] hover:bg-gray-700" href="#" x-data="{ reportModal: false }">
+<span class="material-symbols-outlined text-base text-red-500"> report </span> <span class="text-red-500">Report User</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-[var(--text-primary)] hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined text-base"> block </span> Block User
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<div class="flex flex-1 flex-col">
+<div class="border-b border-[var(--secondary-bg)] p-4 text-center">
+<p class="text-sm text-[var(--text-secondary)]">You matched on Monday. Say hello!</p>
+</div>
+<div class="flex-1 overflow-y-auto p-6">
+<div class="flex flex-col gap-6">
+<div class="flex items-end gap-3 message-animate">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrp0VEf5H7Hr2mMd18-9nlYQNYAgrXZPSwIJnQqF3hsCV03vurNRztR27mOUatcQ3pxTne5kKTzAXfEAJYRznp6ZDWKFf3U-2HB9kz8p7RKFNjcNhKnodhJc9tW6xEDuyZv0VmeZyV_h8OFfAemR1qXE9voItEtBh7YMv2VLoZpwGGUlRfi-eQ2wYmaMxU7q-poSIY2y7qETprSLkTHNJdo3yA75Ce4xW_3VGzko44PaoZ408l1O6nX8KX4RRfBD15TD6CxMBAw4M");'></div>
+<div class="group">
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1">Sophia</p>
+<div class="relative">
+<p class="received-message max-w-md">Hi there! I'm excited to connect with someone who's also passionate about mindfulness and yoga. How's your day going?</p>
+<button class="reaction-button opacity-0 group-hover:opacity-100">❤️</button>
+</div>
+</div>
+</div>
+<div class="flex items-end justify-end gap-3 message-animate">
+<div class="group">
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1 text-right">You</p>
+<div class="relative">
+<p class="sent-message max-w-md">Hey Sophia! My day's been pretty good, just finished a meditation session. How about you?</p>
+<div class="absolute -bottom-4 left-2 flex gap-1">
+<div class="bg-gray-700 p-1 rounded-full text-xs">❤️ 1</div>
+</div>
+</div>
+</div>
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB43Yf3m2NdtxX6sfhw6VNmsz9I-IxcR9TMZXdkJLMEL1tWP-BhVGv_wTDxZDm6pol9xdI3_mg3B4u8R-NTBZYEkacWfuzYj_POPsYn45T2Wr_sYLUzcU_F2XKee2tyH9CbEXY-NPinyZZ6hlUBCB28ayZKY7GztUBklcq781-VsfXDG9ruiLfQnWzkXQqJkx1ZlpVM3FmFzS7Nl4YL_Ms-W-xIMmJg79cavCGuBy0PISrM9JD8quEtQEDVkMsvQAb3qM_gt3n8LAg");'></div>
+</div>
+<div class="flex items-end gap-3 message-animate">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnSPanQCfr0tKjfbCgwSeheGbF0X8X9QI6c0l5cLH174_uv4cgIqwiWXLOHqeze1izIdY2O2hebPYgqaIfjO2RRU9UT0mWcPcJafj2WPxmkd1YgneMpyAbngOTRkcBhqRQ6gqUErjp0bBcdiRggO1wEqS8mIvqLDNd_tZrX59lwcj-OPOBPWRGOsSrPRAvZ5VNNhHLko3B8y31YuWt7kcPSXkDY_eeZv3WH2ks0VRbte-Crsi6B5j7oObUTi3d7w10NYbJu1lkli8");'></div>
+<div class="group">
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1">Sophia</p>
+<div class="relative">
+<p class="received-message max-w-md">That sounds lovely! I had a great yoga class this morning, feeling centered and energized. What kind of meditation do you practice?</p>
+<button class="reaction-button opacity-0 group-hover:opacity-100">👍</button>
+</div>
+</div>
+</div>
+<div class="flex items-end justify-end gap-3 message-animate">
+<div class="group">
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1 text-right">You</p>
+<div class="relative">
+<p class="sent-message max-w-md">I usually do guided meditations, focusing on breath and body awareness. It helps me stay present. Do you have any favorite yoga styles?</p>
+<button class="reaction-button opacity-0 group-hover:opacity-100">❤️</button>
+</div>
+</div>
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo2FS2E2IyIviL884R_ucUdWifLprHMcUxc1xroBRMZsUitscPkUc-TlCnMPxxY5x3qbDgKFMYejAphiL402Q5Q3nh4GmLNU6JCioZUSkN8yHAyFVAu7cR7B2WEjfNxxcbqFdC7gr7ok3DTrtLiD3F0kDvdpfFXkfEq3ghJY3vhAfS_R6E3qHBu5TERzkstQ9nqNfeECK2jW-rK2wbqbDRsGkluWDrLPeJh34USfzTf76HhRNTKl4OY1dB_56wL9r5eCTG6Mkzv8Q");'></div>
+</div>
+<div class="flex items-end gap-3 message-animate">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnSPanQCfr0tKjfbCgwSeheGbF0X8X9QI6c0l5cLH174_uv4cgIqwiWXLOHqeze1izIdY2O2hebPYgqaIfjO2RRU9UT0mWcPcJafj2WPxmkd1YgneMpyAbngOTRkcBhqRQ6gqUErjp0bBcdiRggO1wEqS8mIvqLDNd_tZrX59lwcj-OPOBPWRGOsSrPRAvZ5VNNhHLko3B8y31YuWt7kcPSXkDY_eeZv3WH2ks0VRbte-Crsi6B5j7oObUTi3d7w10NYbJu1lkli8");'></div>
+<div class="group">
+<p class="text-xs font-medium text-[var(--text-secondary)] mb-1">Sophia</p>
+<div class="relative">
+<div class="received-message max-w-md flex items-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+<div class="w-48 h-1 bg-gray-500 rounded-full">
+<div class="w-1/2 h-1 bg-[var(--primary-color)] rounded-full"></div>
+</div>
+<span>0:15</span>
+</div>
+<button class="reaction-button opacity-0 group-hover:opacity-100">👏</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-[var(--secondary-bg)] shrink-0">
+<div class="mb-3" x-show="showPrompts" x-transition:enter="transition ease-out duration-300" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:leave="transition ease-in duration-200" x-transition:leave-end="opacity-0 transform -translate-y-4" x-transition:leave-start="opacity-100 transform translate-y-0">
+<p class="text-sm text-[var(--text-secondary)] mb-2 text-center">Conversation Starters</p>
+<div class="flex gap-2 justify-center flex-wrap">
+<button class="bg-[var(--secondary-bg)] text-xs text-[var(--text-primary)] px-3 py-1.5 rounded-full hover:bg-opacity-80">What's a wellness goal you're working on?</button>
+<button class="bg-[var(--secondary-bg)] text-xs text-[var(--text-primary)] px-3 py-1.5 rounded-full hover:bg-opacity-80">Favorite place to practice yoga?</button>
+<button class="bg-[var(--secondary-bg)] text-xs text-[var(--text-primary)] px-3 py-1.5 rounded-full hover:bg-opacity-80">Share a pic of your happy place!</button>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-full bg-[var(--secondary-bg)]">
+<div class="relative" x-data="{ open: false }">
+<button @click="open = !open" class="flex h-9 w-9 items-center justify-center rounded-full text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-xl"> add </span>
+</button>
+<div @click.away="open = false" class="absolute bottom-12 left-0 w-40 bg-[var(--background)] border border-[var(--secondary-bg)] rounded-lg shadow-xl py-2" style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-end="opacity-100 scale-100" x-transition:enter-start="opacity-0 scale-95" x-transition:leave="transition ease-in duration-150" x-transition:leave-end="opacity-0 scale-95" x-transition:leave-start="opacity-100 scale-100">
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--secondary-bg)]" href="#">
+<span class="material-symbols-outlined text-xl"> photo_camera </span>
+<span>Photo</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--secondary-bg)]" href="#">
+<span class="material-symbols-outlined text-xl"> mic </span>
+<span>Audio Clip</span>
+</a>
+</div>
+</div>
+<input class="flex-1 bg-transparent border-none text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-0" placeholder="Send a message..." type="text"/>
+<button @click="showPrompts = !showPrompts" class="flex h-9 w-9 items-center justify-center rounded-full text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-xl"> auto_awesome </span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary-color)] text-[var(--background)] transition-colors hover:bg-opacity-90">
+<span class="material-symbols-outlined text-xl"> send </span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75" style="display: none;" x-cloak="" x-data="{ reportModal: false }" x-show="reportModal">
+<div @click.away="reportModal = false" class="bg-[var(--background)] rounded-lg shadow-xl p-6 w-full max-w-md mx-4 border border-[var(--secondary-bg)]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Report Sophia</h3>
+<button @click="reportModal = false" class="text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-[var(--text-secondary)] mb-6">Your safety is important. Please tell us why you are reporting this user. Your report is anonymous.</p>
+<form>
+<div class="space-y-4">
+<label class="flex items-center text-[var(--text-primary)]">
+<input class="form-radio bg-[var(--secondary-bg)] border-[var(--primary-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="report_reason" type="radio" value="harassment"/>
+<span class="ml-3">Harassment or Hate Speech</span>
+</label>
+<label class="flex items-center text-[var(--text-primary)]">
+<input class="form-radio bg-[var(--secondary-bg)] border-[var(--primary-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="report_reason" type="radio" value="spam"/>
+<span class="ml-3">Spam or Scam</span>
+</label>
+<label class="flex items-center text-[var(--text-primary)]">
+<input class="form-radio bg-[var(--secondary-bg)] border-[var(--primary-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="report_reason" type="radio" value="inappropriate"/>
+<span class="ml-3">Inappropriate Content</span>
+</label>
+<label class="flex items-center text-[var(--text-primary)]">
+<input class="form-radio bg-[var(--secondary-bg)] border-[var(--primary-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="report_reason" type="radio" value="other"/>
+<span class="ml-3">Other</span>
+</label>
+</div>
+<textarea class="mt-6 w-full bg-[var(--secondary-bg)] border border-[var(--secondary-bg)] rounded-md p-3 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent" placeholder="Provide additional details (optional)" rows="3"></textarea>
+<div class="mt-6 flex items-center">
+<input class="form-checkbox h-5 w-5 bg-[var(--secondary-bg)] border-[var(--primary-color)] text-[var(--primary-color)] rounded focus:ring-[var(--primary-color)]" id="block_user" type="checkbox"/>
+<label class="ml-3 text-[var(--text-primary)]" for="block_user">Also block this user</label>
+</div>
+<div class="mt-8 flex justify-end gap-4">
+<button @click="reportModal = false" class="px-6 py-2 rounded-full text-[var(--text-primary)] bg-[var(--secondary-bg)] hover:bg-opacity-80 transition-colors" type="button">Cancel</button>
+<button @click.prevent="reportModal = false" class="px-6 py-2 rounded-full bg-[var(--primary-color)] text-[var(--background)] font-bold hover:bg-opacity-90 transition-colors" type="submit">Submit Report</button>
+</div>
+</form>
+</div>
+</div>
+<script defer="" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+</body></html>

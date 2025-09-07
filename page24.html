@@ -1,0 +1,155 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #1a2e39;
+        --text-primary: #ffffff;
+        --text-secondary: #a0b8c6;
+      }
+    </style>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111c22] dark group/design-root overflow-x-hidden" style='font-family: Epilogue, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233c48] px-10 py-4">
+<div class="flex items-center gap-3 text-white">
+<svg fill="none" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 25.6667C11.5362 25.6667 9.12115 25.0407 6.99321 23.8546C4.86526 22.6685 3.10078 20.9703 1.88849 18.9439C0.676208 16.9175 0.0638511 14.646 0.125134 12.3553C0.186417 10.0645 0.919013 7.84459 2.23958 5.96574C3.55015 4.08689 5.39414 2.62886 7.55835 1.7699C9.72255 0.910933 12.1097 0.686522 14.413 1.13063C16.7163 1.57473 18.8474 2.67035 20.5901 4.28954C22.3328 5.90874 23.6186 7.98632 24.3132 10.2917" stroke="var(--primary-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M25.6666 14C25.6666 16.4638 25.0407 18.8788 23.8546 21.0068C22.6685 23.1347 20.9702 24.8992 18.9438 26.1115C16.9174 27.3238 14.646 27.9361 12.3552 27.8749C10.0645 27.8136 7.84459 27.081 5.96574 25.7604C4.08689 24.4499 2.62886 22.6059 1.7699 20.4417C0.910933 18.2775 0.686522 15.8903 1.13063 13.587C1.57473 11.2837 2.67035 9.15259 4.28954 7.40989" stroke="var(--primary-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">Welldone</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-8">
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-base font-medium leading-normal" href="#">Matches</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-base font-medium leading-normal" href="#">Activities</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-base font-medium leading-normal" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center rounded-full h-10 w-10 bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[#2e4a5a] transition-colors">
+<span class="material-symbols-outlined text-2xl"> notifications </span>
+<div class="absolute top-1.5 right-1.5 size-2.5 bg-[var(--primary-color)] rounded-full border-2 border-[#111c22]"></div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFubHnVESQUmOCOMvQsM8mQBhpWkJCIESkujlc8ptL7V78ECGkqDK7BXVVczXG-YzJFrMCJSJtd8Krx4VTvT7kz9ktJqJ-XGsOWsU52c86WuwnqZpGqYQGXLVgRJMCKJwYKkZKRrFN08QhoURd8q27R9nJOwPIqENBa5mkyw6hnI-Fhqwc6uhTGoSDwTswV8ktuMkrhSeQcGgFftC7altDzrd0kpaSJiauAvMUgVrIiUpu8WxNdITIlG7Okm0BawAE4l5jQMDD3hk");'></div>
+</div>
+</div>
+</header>
+<main class="px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between items-center gap-3 p-4 mb-6">
+<h1 class="text-[var(--text-primary)] tracking-tight text-4xl font-bold leading-tight">Activity Log</h1>
+</div>
+<div class="flex flex-col gap-8">
+<div class="flex flex-wrap items-center gap-4 px-4">
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--primary-color)] text-[var(--text-primary)]">All Activity</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:bg-[#2e4a5a] hover:text-white transition-colors">Matches</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:bg-[#2e4a5a] hover:text-white transition-colors">Messages</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:bg-[#2e4a5a] hover:text-white transition-colors">Profile</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:bg-[#2e4a5a] hover:text-white transition-colors">Activities</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-[var(--secondary-color)] text-[var(--text-secondary)] hover:bg-[#2e4a5a] hover:text-white transition-colors">Resources</button>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzIrOjdfurS5pliWXxCpNnEShAe-c80cpp1mU8W4KSK_Hh1H9viqYAmvfEsnfsvPTyZr28SjqZtpZtFbc4WHstfF5qIPg-0Oh80vKjCftJ1VwU8B_W6KxljSyvCkZrSSbgaGlDXi9OHsFMqApiO7idf_zqH62z3kbo9lULoR3KbwXiHXTmvfucNx5nza0ii319XLuV2XUp248hzTPlg6wpD8x3uqDowrT7HwuuPRluGr0-5BNyYsxm_C7ZqGpw4VJaqAg7QuHt9os");'></div>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">New Match</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You matched with Sarah</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">2d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> chat_bubble </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Message Sent</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You sent a message to Sarah</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">2d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> person </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Profile Updated</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You updated your profile</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">3d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> bookmark </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Resource Viewed</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You viewed a resource on mindfulness</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">4d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> calendar_month </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Activity Planned</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You planned a yoga session with Sarah</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">5d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> chat_bubble </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Message Received</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You received a message from Sarah</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">6d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> bookmark </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Resource Viewed</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You viewed a resource on healthy eating</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">7d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZQAXdmesGXqw48thlIEx1LnOYCNodvCw7ephs-KmPjw4KQisuhzuEe0pLIIzMoO2CiUUqKF_PN6z9YhSzY_bgY4PMbG2QdLP2tcOOrMgfSdgCyp-8DGQhNFvpEEgmMRXPE8qGOYmcTyGP5UFIuTpsiML9gtiTSpd6H4lSQ98XCeSoNHkVNd8VMtfX6JNzaKFQrq1kihw1uvYrrgQq3xL_MUHKvfNwMf-o1coTxBIhN-Dtppgu21GUBa0Xe-Gh2hJxfKu6M6ZUa74");'></div>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">New Match</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You matched with Emily</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">8d ago</p></div>
+</div>
+<div class="flex items-center gap-4 bg-[var(--secondary-color)]/50 hover:bg-[var(--secondary-color)] transition-colors duration-300 px-6 py-4 rounded-lg">
+<div class="text-white flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]"> person </span>
+</div>
+<div class="flex-grow">
+<p class="text-[var(--text-primary)] text-base font-medium leading-normal">Profile Updated</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">You updated your profile</p>
+</div>
+<div class="shrink-0"><p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">9d ago</p></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

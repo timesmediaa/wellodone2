@@ -1,0 +1,131 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111c22] dark group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233c48] px-10 py-4">
+<div class="flex items-center gap-4 text-white">
+<svg class="size-8 text-[#13a4ec]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Welldone</h2>
+</div>
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Matches</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Travel</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Profile</a>
+</nav>
+<div class="flex items-center justify-end gap-4">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#233c48] text-white/80 transition-colors hover:bg-[#13a4ec] hover:text-white">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHSpmFQW-ArSG-lxxcmOMOCPdngJJgbg-K9m60sgsBkFAnSXB66I0sJA93y3EnWllntVBH19hj3c8WxvldEebQ-_ug3hl44ZBIOUw39inMvbdP6Sx87dE_GztCmoBBbzgnmPfg092aCvK8q9v50q8WoWd1Q2Wh52TmOHWnDtXNaT_mvAbz2UAwpo9mVb138fkNEeOpXuUvEpGytHAUxARwAWNOTVoayUrgGmBg7OQto5XAFPxnVXNMqxw7y_43IbNJ6EInn0DMK2k");'></div>
+</div>
+</header>
+<main class="flex-1 px-40 py-10">
+<div class="mx-auto max-w-4xl">
+<div class="text-center mb-10">
+<h1 class="text-white text-4xl font-bold leading-tight tracking-tighter">Welldone Travel Companion</h1>
+<p class="text-[#92b7c9] text-lg font-normal leading-normal mt-2">Connect with fellow travelers or locals in your destination.</p>
+</div>
+<div class="bg-[#192b33] rounded-2xl p-8 shadow-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+<div class="relative">
+<label class="text-white/80 text-sm font-medium mb-2 block" for="destination">Destination</label>
+<span class="material-symbols-outlined absolute left-4 top-12 text-white/50">location_on</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#13a4ec] border-none bg-[#233c48] focus:border-none h-14 placeholder:text-[#92b7c9] pl-12 p-4 text-base font-normal leading-normal" id="destination" placeholder="Enter your travel destination" value=""/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="relative">
+<label class="text-white/80 text-sm font-medium mb-2 block" for="start-date">Start Date</label>
+<span class="material-symbols-outlined absolute left-4 top-12 text-white/50">calendar_today</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#13a4ec] border-none bg-[#233c48] focus:border-none h-14 placeholder:text-[#92b7c9] pl-12 p-4 text-base font-normal leading-normal" id="start-date" placeholder="Start Date" type="date" value=""/>
+</div>
+<div class="relative">
+<label class="text-white/80 text-sm font-medium mb-2 block" for="end-date">End Date</label>
+<span class="material-symbols-outlined absolute left-4 top-12 text-white/50">calendar_today</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#13a4ec] border-none bg-[#233c48] focus:border-none h-14 placeholder:text-[#92b7c9] pl-12 p-4 text-base font-normal leading-normal" id="end-date" placeholder="End Date" type="date" value=""/>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Looking for:</h2>
+<div class="flex flex-wrap gap-4">
+<label class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#325567] px-4 h-11 text-white has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 relative cursor-pointer transition-all duration-200">
+<input checked="" class="invisible absolute" name="looking-for" type="radio"/>
+                    Travel Companion
+                  </label>
+<label class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#325567] px-4 h-11 text-white has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 relative cursor-pointer transition-all duration-200">
+<input class="invisible absolute" name="looking-for" type="radio"/>
+                    Local Guide
+                  </label>
+<label class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#325567] px-4 h-11 text-white has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 relative cursor-pointer transition-all duration-200">
+<input class="invisible absolute" name="looking-for" type="radio"/>
+                    Friendly Face
+                  </label>
+</div>
+</div>
+<div class="flex justify-center mt-8">
+<button class="flex w-full md:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#13a4ec] text-white text-base font-bold leading-normal tracking-wide hover:bg-[#0e8ac5] transition-colors">
+                  Find Connections
+                </button>
+</div>
+</div>
+<div class="mt-12">
+<h2 class="text-white text-2xl font-bold leading-tight tracking-tight px-4 pb-6">Potential Connections</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 rounded-xl bg-[#192b33] p-4 shadow-lg transition-transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoEflB1YhxEGDBmQcst67ke-zMgq2vcQj2J_2bMX3L6a--upazLA2Lq5kOMHKCWucQ_UdJDMEdhLPce9l2FJySfbjF2iwBj74NBmBlCwP5L1ESYR9S0n11A88VlVLahGU1F9eqNyWStllFJZ3Km6m6xQzThIqxqOJRwp0pfRLk289nbhCp6Cs3OMxmbgWfE7OMf2wSls_W4BnyMQmRafHjTLVcRfbYMmjUbCGZGTaafte9eutwp-vSa_XJvMJfI7_U8spGY03zbp0");'></div>
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight">Sophia, 28</p>
+<p class="text-[#92b7c9] text-sm font-normal leading-normal">Traveler | Yoga Enthusiast | Foodie</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#233c48] text-white/90 text-sm font-medium leading-normal hover:bg-[#13a4ec] hover:text-white transition-colors">
+                    View Profile
+                  </button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-[#192b33] p-4 shadow-lg transition-transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxLCOTuPN2NnoqaOeGhSWIwvE7uyZdFWR6HIJXTWujUJN6me9fsUdftQvt5mAuZxGmRx1-t2eMM608HJvzaMIqwWONL8m3KR20YxsyOSM1oMqTLMx-du5Ox92kHhEWUmgOW3sVNG2biPS_-w4Evg_7nLVErCRTqwkpnLFp-8Df0nBIm9U0ftE18vzmcArA9ByMnJNbLgw4MV7ADtUDGXPumhh-23dgCasvF3WgIf7-kBx3XGEkiCE6I7cA8H4Q_CK7fQNVMk2G1Sg");'></div>
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight">Ethan, 32</p>
+<p class="text-[#92b7c9] text-sm font-normal leading-normal">Local Guide | Hiking Expert | History Buff</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#233c48] text-white/90 text-sm font-medium leading-normal hover:bg-[#13a4ec] hover:text-white transition-colors">
+                    View Profile
+                  </button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-[#192b33] p-4 shadow-lg transition-transform hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBau1sKDP4WUaGwBADdCg_v25hlYQehcC305Kvwrl7MaQ3yLoBvOjO565omQDJXOjTF-BRjuUM6PVItC6lzTrXCVqowR1CLbEKqoBH5csNtotBCyttSONq6kze6x75aZnaaMqylU9Jb6kiOGosewSeSZbb8PQz468uA6lQ0ChESeUXgx83EuutJMl7ER1109Gx5P1uMjKUwvm8tfPrkwujlH0ODLor2DaNE4YX8IbWcoCPV6ZPcoIufq4KfVYkGtYkE9kA8pgMzy1I");'></div>
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight">Olivia, 25</p>
+<p class="text-[#92b7c9] text-sm font-normal leading-normal">Traveler | Art Lover | Coffee Connoisseur</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#233c48] text-white/90 text-sm font-medium leading-normal hover:bg-[#13a4ec] hover:text-white transition-colors">
+                    View Profile
+                  </button>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<p class="text-[#92b7c9] text-base font-normal leading-relaxed max-w-2xl mx-auto">
+                Find a companion or guide for your journey and stay, ensuring you never feel alone.
+              </p>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

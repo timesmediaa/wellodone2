@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Welldone - Match Preferences</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(18,33,24)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(150,197,169)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+      }
+    </style>
+</head>
+<body class="bg-[#122118] font-splineSans text-white">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#264532] px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 text-[#38e07b]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Welldone</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#1b3124] transition-colors hover:bg-[#264532]">
+<span class="material-symbols-outlined text-white"> settings </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0EwdkrGYQCyC0yZfz7ce0_F3hukeS1T5-wqB8av7qYP7wpuHtg8s3hv56iYqqX3e1rpQAryBYKy9qXFE6A6EfzH0RwPSmqz6q59fldK81utRbi7Ohnt5pzyEwdeQXdTlZxhJCgzinKHRSwW7QilzhPe-5TSToWv0TcrjftJ-dFpJeCIqNl356Vq45PySVRkK97bZZEDGNsFdymQzBO8Y5epSHN86FyOEcCvXnHH9ocNiKDphJ1sRjZQhUKdO5hPnhdNhZDiQbeLc");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center p-4 sm:p-6 md:p-8">
+<div class="w-full max-w-2xl space-y-8">
+<div class="text-center">
+<h2 class="text-4xl font-bold tracking-tighter">Match Preferences</h2>
+<p class="text-[#96c5a9] mt-2">Set your criteria for daily matches to find meaningful connections.</p>
+</div>
+<div class="space-y-6 rounded-lg border border-[#264532] bg-[#1b3124]/50 p-6">
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Age Range</h3>
+<p class="text-[#96c5a9] text-sm">Select your preferred age range.</p>
+<div class="flex h-[38px] w-full items-center pt-1.5">
+<div class="flex h-1.5 w-full rounded-full bg-[#366348]">
+<div class="relative w-[40%]">
+<div class="absolute -left-2 -top-2 flex flex-col items-center gap-2">
+<div class="size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div>
+<p class="text-white text-sm font-medium">18</p>
+</div>
+</div>
+<div class="h-full flex-1 rounded-full bg-[#38e07b]"></div>
+<div class="relative w-[35%]">
+<div class="absolute -right-2 -top-2 flex flex-col items-center gap-2">
+<div class="size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div>
+<p class="text-white text-sm font-medium">35</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="border-t border-[#264532]"/>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Location Proximity</h3>
+<p class="text-[#96c5a9] text-sm">Set the maximum distance for your matches.</p>
+<div class="flex w-full items-center gap-4">
+<div class="flex h-1.5 flex-1 rounded-full bg-[#366348]">
+<div class="h-full w-[50%] rounded-full bg-[#38e07b]"></div>
+<div class="relative"><div class="absolute -left-2.5 -top-2 size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div></div>
+</div>
+<p class="text-white text-sm font-medium">50 miles</p>
+</div>
+</div>
+<hr class="border-t border-[#264532]"/>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Educational Background</h3>
+<label class="block">
+<select class="form-select mt-1 block w-full rounded-md border border-[#366348] bg-[#122118] px-4 py-3 text-base text-white placeholder:text-[#96c5a9] focus:border-[#38e07b] focus:outline-none focus:ring-1 focus:ring-[#38e07b]">
+<option>Any</option>
+<option>High School</option>
+<option>Bachelor's Degree</option>
+<option>Master's Degree</option>
+<option>Doctorate</option>
+</select>
+</label>
+</div>
+<hr class="border-t border-[#264532]"/>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Activity Preferences</h3>
+<p class="text-[#96c5a9] text-sm">Let potential matches know how you like to stay well.</p>
+<div class="space-y-6 pt-2">
+<div class="space-y-3">
+<h4 class="font-semibold">Fitness</h4>
+<div class="flex w-full items-center gap-4">
+<span class="text-sm text-[#96c5a9]">Low</span>
+<div class="flex h-1.5 flex-1 rounded-full bg-[#366348]">
+<div class="h-full w-[60%] rounded-full bg-[#38e07b]"></div>
+<div class="relative"><div class="absolute -left-2.5 -top-2 size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div></div>
+</div>
+<span class="text-sm text-[#96c5a9]">High</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2">
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="fitness" type="radio"/>
+<span class="text-sm">Yoga</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="fitness" type="radio"/>
+<span class="text-sm">Running</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="fitness" type="radio"/>
+<span class="text-sm">Weightlifting</span>
+</label>
+</div>
+</div>
+<div class="space-y-3">
+<h4 class="font-semibold">Mindfulness</h4>
+<div class="flex w-full items-center gap-4">
+<span class="text-sm text-[#96c5a9]">Casual</span>
+<div class="flex h-1.5 flex-1 rounded-full bg-[#366348]">
+<div class="h-full w-[30%] rounded-full bg-[#38e07b]"></div>
+<div class="relative"><div class="absolute -left-2.5 -top-2 size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div></div>
+</div>
+<span class="text-sm text-[#96c5a9]">Dedicated</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2">
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="mindfulness" type="radio"/>
+<span class="text-sm">Meditation</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="mindfulness" type="radio"/>
+<span class="text-sm">Journaling</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="mindfulness" type="radio"/>
+<span class="text-sm">Breathing</span>
+</label>
+</div>
+</div>
+<div class="space-y-3">
+<h4 class="font-semibold">Outdoor Activities</h4>
+<div class="flex w-full items-center gap-4">
+<span class="text-sm text-[#96c5a9]">Indoorsy</span>
+<div class="flex h-1.5 flex-1 rounded-full bg-[#366348]">
+<div class="h-full w-[80%] rounded-full bg-[#38e07b]"></div>
+<div class="relative"><div class="absolute -left-2.5 -top-2 size-5 rounded-full bg-[#38e07b] border-2 border-[#122118]"></div></div>
+</div>
+<span class="text-sm text-[#96c5a9]">Adventurous</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2">
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="outdoors" type="radio"/>
+<span class="text-sm">Hiking</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="outdoors" type="radio"/>
+<span class="text-sm">Camping</span>
+</label>
+<label class="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-[#264532]/50 cursor-pointer">
+<input class="h-4 w-4 border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="outdoors" type="radio"/>
+<span class="text-sm">Kayaking</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<hr class="border-t border-[#264532]"/>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Deal-Breakers</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="flex items-center gap-3 rounded-md p-3 transition-colors hover:bg-[#264532]/50">
+<input class="h-5 w-5 rounded border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="text-base">Must love dogs</span>
+</label>
+<label class="flex items-center gap-3 rounded-md p-3 transition-colors hover:bg-[#264532]/50">
+<input class="h-5 w-5 rounded border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="text-base">Values family</span>
+</label>
+<label class="flex items-center gap-3 rounded-md p-3 transition-colors hover:bg-[#264532]/50">
+<input class="h-5 w-5 rounded border-2 border-[#366348] bg-transparent text-[#38e07b] checked:border-[#38e07b] checked:bg-[#38e07b] checked:bg-[image:--checkbox-tick-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="text-base">Non-smoker</span>
+</label>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="flex min-w-[120px] items-center justify-center rounded-lg bg-[#38e07b] px-6 py-3 text-base font-bold text-[#122118] transition-transform hover:scale-105">
+                Save Preferences
+              </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

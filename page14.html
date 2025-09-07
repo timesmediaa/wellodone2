@@ -1,0 +1,95 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-[#122118]">
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden" style='--select-button-svg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(150,197,169)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M215.39,92.61a8,8,0,0,0-11.38,0L128,168.63,52,92.61a8,8,0,0,0-11.38,11.38l80,80a8,8,0,0,0,11.38,0l80-80A8,8,0,0,0,215.39,92.61Z%27%3e%3c/path%3e%3c/svg%3e"); font-family: Epilogue, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#264532] px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<svg class="size-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Welldone</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+<a class="hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-white transition-colors" href="#">Matches</a>
+<a class="text-white" href="#">Feedback</a>
+<a class="hover:text-white transition-colors" href="#">Profile</a>
+</nav>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-gray-300 hover:text-white hover:bg-[#264532] transition-colors">
+<span class="material-symbols-outlined"> help </span>
+</button>
+<div class="relative">
+<button class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdIzwUIOKDLu4aPFcMT2xb6nX50XmKoRocMZFcUEHJvNKKf2UuFTfJF0_bT-N0qnx4iw6YVoRImGg9jVjzNqKwX-nVauaIG0ETtCNUWl-2w6cXGt5Acv61zpYXVHO6h-9m6kULPDxHsuORI6X3bYCD7AbPEYmHbon7QO_1P2pN6okPCuI3lyEFkz77hhwCa7FthngtbmmZ-HLt_l7JIDDL06XRnRVwL9N2IBEKys4W1DJG8McDUr55zXG-f5Dh5GeoZnRKUc5huHk");'></button>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-[#122118]"></div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-2xl space-y-8">
+<div class="text-center">
+<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Share Your Thoughts</h1>
+<p class="mt-4 text-lg text-gray-300">We value your feedback. Let us know how we can improve Welldone.</p>
+</div>
+<form class="bg-[#1b3124] rounded-lg shadow-lg p-8 space-y-6" id="feedback-form">
+<div>
+<label class="block text-sm font-medium text-white pb-2" for="feedback-type">Feedback Type</label>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#38e07b] border border-[#366348] bg-[#122118] focus:border-[#38e07b] h-12 bg-[image:--select-button-svg] placeholder:text-[#96c5a9] px-4 py-2 text-base font-normal leading-normal" id="feedback-type" name="feedback-type">
+<option>Suggestion</option>
+<option>Bug Report</option>
+<option>Compliment</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-white pb-2" for="feedback-details">Details</label>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#38e07b] border border-[#366348] bg-[#122118] focus:border-[#38e07b] placeholder:text-[#96c5a9] p-4 text-base font-normal leading-normal" id="feedback-details" name="feedback-details" placeholder="Please describe your feedback in detail..." rows="6"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-white pb-2" for="email">Email (Optional)</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-[#38e07b] border border-[#366348] bg-[#122118] focus:border-[#38e07b] h-12 placeholder:text-[#96c5a9] px-4 py-2 text-base font-normal leading-normal" id="email" name="email" placeholder="you@example.com" type="email"/>
+<p class="mt-2 text-xs text-gray-400">We'll only use this to follow up on your feedback.</p>
+</div>
+<div class="flex justify-end pt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-[#38e07b] text-[#122118] text-base font-bold leading-normal tracking-wide hover:bg-opacity-90 transition-all duration-300 ease-in-out transform hover:scale-105" type="submit">
+                  Submit Feedback
+                </button>
+</div>
+</form>
+<div class="hidden text-center bg-[#1b3124] rounded-lg p-8" id="confirmation-message">
+<div class="flex justify-center items-center mb-4">
+<span class="material-symbols-outlined text-5xl text-[#38e07b]">
+                        check_circle
+                    </span>
+</div>
+<h2 class="text-2xl font-bold text-white">Thank You!</h2>
+<p class="mt-2 text-gray-300">Your feedback has been submitted successfully. We appreciate you taking the time to help us improve.</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+      const form = document.getElementById('feedback-form');
+      const confirmationMessage = document.getElementById('confirmation-message');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.classList.add('hidden');
+        confirmationMessage.classList.remove('hidden');
+      });
+    </script>
+
+</body></html>

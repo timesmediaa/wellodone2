@@ -1,0 +1,132 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0fdf4;
+        --primary-100: #dcfce7;
+        --primary-200: #bbf7d0;
+        --primary-300: #86efac;
+        --primary-400: #4ade80;
+        --primary-500: #38e07b;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+      .interest-card {
+        @apply flex flex-col items-center justify-center gap-4 p-6 rounded-2xl border border-transparent bg-[#1b3124] cursor-pointer transition-all duration-300;
+      }
+      .interest-card:hover {
+        @apply bg-[#264532] border-[var(--primary-500)];
+      }
+      .interest-card.selected {
+        @apply bg-[var(--primary-900)] border-[var(--primary-500)] ring-2 ring-[var(--primary-500)];
+      }
+      .interest-card .icon {
+        @apply w-12 h-12 flex items-center justify-center rounded-full bg-[#264532] text-white transition-colors duration-300;
+      }
+      .interest-card:hover .icon {
+        @apply bg-[#14532d] text-[var(--primary-500)];
+      }
+      .interest-card.selected .icon {
+        @apply bg-[var(--primary-500)] text-white;
+      }
+    </style>
+</head>
+<body class="bg-[#122118] text-white" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#264532] px-10 py-4">
+<div class="flex items-center gap-3 text-white">
+<svg class="h-8 w-8 text-[var(--primary-500)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h1 class="text-2xl font-bold">Welldone</h1>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#264532] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors">
+<span>Help</span>
+</button>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-5xl mx-auto">
+<div class="text-center mb-8">
+<p class="text-lg font-medium text-[var(--primary-400)]">Step 1 of 5</p>
+<div class="mt-2 h-2.5 w-full rounded-full bg-[#366348]">
+<div class="h-2.5 rounded-full bg-[var(--primary-500)]" style="width: 20%;"></div>
+</div>
+</div>
+<div class="text-center mb-10">
+<h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">What are your wellness interests?</h2>
+<p class="mt-4 text-lg text-gray-300">Select all that apply. This helps us find your perfect match.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<div class="interest-card selected">
+<div class="icon"><span class="material-symbols-outlined text-3xl">self_improvement</span></div>
+<h3 class="text-lg font-bold text-center">Yoga</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">hiking</span></div>
+<h3 class="text-lg font-bold text-center">Hiking</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">palette</span></div>
+<h3 class="text-lg font-bold text-center">Painting</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">menu_book</span></div>
+<h3 class="text-lg font-bold text-center">Reading</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">spa</span></div>
+<h3 class="text-lg font-bold text-center">Meditation</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">outdoor_grill</span></div>
+<h3 class="text-lg font-bold text-center">Cooking</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">music_note</span></div>
+<h3 class="text-lg font-bold text-center">Music</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">potted_plant</span></div>
+<h3 class="text-lg font-bold text-center">Gardening</h3>
+</div>
+<div class="interest-card selected">
+<div class="icon"><span class="material-symbols-outlined text-3xl">directions_bike</span></div>
+<h3 class="text-lg font-bold text-center">Cycling</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">photo_camera</span></div>
+<h3 class="text-lg font-bold text-center">Photography</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">movie</span></div>
+<h3 class="text-lg font-bold text-center">Movies</h3>
+</div>
+<div class="interest-card">
+<div class="icon"><span class="material-symbols-outlined text-3xl">travel</span></div>
+<h3 class="text-lg font-bold text-center">Travel</h3>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="flex min-w-[200px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-[var(--primary-500)] text-[#052e16] text-lg font-bold leading-normal tracking-wide hover:bg-[var(--primary-400)] transition-colors transform hover:scale-105">
+<span>Continue</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

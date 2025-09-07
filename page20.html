@@ -1,0 +1,154 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Welldone - Notifications</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+</head>
+<body class="bg-[#111c22] font-['Spline_Sans',_'Noto_Sans',_sans-serif] text-white">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#233c48] px-10 py-4">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">
+              favorite
+            </span>
+<h2 class="text-xl font-bold">Welldone</h2>
+</div>
+<nav class="flex flex-1 justify-center gap-8">
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Matches</a>
+<a class="text-white text-sm font-bold border-b-2 border-[var(--primary-color)] pb-1" href="#">Plans</a>
+<a class="text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-gray-300 hover:text-white hover:bg-[#233c48] transition-colors">
+<span class="material-symbols-outlined">
+                notifications
+              </span>
+<div class="absolute top-1 right-1 h-3 w-3 bg-red-500 rounded-full border-2 border-[#111c22]"></div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABjsk3aBZVTvHTfHCsuLWiaLaC178QuhvvGJTzkaIXSd7iVcdO6Qp6CsY7sk6mLsPMBNEzeYGZu_SyBn74DMpCah1O2POrQyBpXf5EsYf3oX7bT9rdYrp9WI5Nvy8-wFnTrL1WrSJPHnF7GV1anjAAnAo1EHHkhRg70ldM3gdc4Hli_lmkV1ngl5f0D609FxVFG96uDqwHBU7i_Yu9PefdNZ_Fug3tx43DkdPl8SAttHKVmSW9TCiy11eV2Dee4nWUy29naLRO9ck");'></div>
+</div>
+</header>
+<main class="px-10 py-12 flex justify-center">
+<div class="w-full max-w-2xl">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-4xl font-bold">Confirmed Plans</h1>
+<div class="flex items-center gap-2 text-sm text-gray-400">
+<span>Sort by:</span>
+<button class="font-medium text-white hover:text-[var(--primary-color)] transition-colors">Upcoming</button>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-6 bg-[#1a2831] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-16">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">self_improvement</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Yoga Class</h3>
+<p class="text-gray-400">with Sarah</p>
+</div>
+<span class="text-xs text-gray-500">Just confirmed</span>
+</div>
+<div class="mt-4 flex items-center gap-4 text-gray-300 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Saturday, July 20, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>10:00 AM</span>
+</div>
+</div>
+<p class="mt-2 text-sm text-gray-400 flex items-center gap-2"><span class="material-symbols-outlined text-lg">location_on</span> The Serene Studio, 123 Wellness Ave</p>
+</div>
+<button class="self-start text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-6 p-6 bg-[#1a2831] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-16">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">restaurant</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Brunch</h3>
+<p class="text-gray-400">with Alex</p>
+</div>
+<span class="text-xs text-gray-500">Confirmed 2 days ago</span>
+</div>
+<div class="mt-4 flex items-center gap-4 text-gray-300 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Sunday, July 21, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>11:00 AM</span>
+</div>
+</div>
+<p class="mt-2 text-sm text-gray-400 flex items-center gap-2"><span class="material-symbols-outlined text-lg">location_on</span> The Green Table, 456 Healthy Rd</p>
+</div>
+<button class="self-start text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-6 p-6 bg-[#1a2831] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center justify-center rounded-full bg-[#233c48] shrink-0 size-16">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">park</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Evening Walk</h3>
+<p class="text-gray-400">with Emily</p>
+</div>
+<span class="text-xs text-gray-500">Confirmed last week</span>
+</div>
+<div class="mt-4 flex items-center gap-4 text-gray-300 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Monday, July 22, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>6:00 PM</span>
+</div>
+</div>
+<p class="mt-2 text-sm text-gray-400 flex items-center gap-2"><span class="material-symbols-outlined text-lg">location_on</span> Central Park Entrance, 5th Ave</p>
+</div>
+<button class="self-start text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<h2 class="text-2xl font-bold mb-4">Push Notifications</h2>
+<div class="max-w-sm mx-auto bg-[#1a2831] p-6 rounded-lg shadow-lg">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">
+                        celebration
+                        </span>
+<div>
+<p class="font-bold text-left">Your Yoga Class is tomorrow!</p>
+<p class="text-sm text-gray-400 text-left">Get ready for your date with Sarah at 10:00 AM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
